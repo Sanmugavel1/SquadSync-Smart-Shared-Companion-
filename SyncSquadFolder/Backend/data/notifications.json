@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1761392718834,
+    "type": "deadline",
+    "message": "Deadline added: Assess",
+    "icon": "fa-calendar-check",
+    "color": "var(--color-bg-4)",
+    "read": false,
+    "timestamp": "2025-10-25T11:45:18.834Z"
+  },
+  {
+    "id": 1761392498111,
+    "type": "poll",
+    "message": "New poll: Where are you going?",
+    "icon": "fa-poll",
+    "color": "var(--color-bg-5)",
+    "read": false,
+    "timestamp": "2025-10-25T11:41:38.111Z"
+  },
+  {
+    "id": 1761392324123,
+    "type": "deadline",
+    "message": "Deadline added: Exam",
+    "icon": "fa-calendar-check",
+    "color": "var(--color-bg-4)",
+    "read": false,
+    "timestamp": "2025-10-25T11:38:44.123Z"
+  },
+  {
+    "id": 1761392282089,
+    "type": "expense",
+    "message": "New expense added: Movie",
+    "icon": "fa-wallet",
+    "color": "var(--color-bg-1)",
+    "read": false,
+    "timestamp": "2025-10-25T11:38:02.089Z"
+  },
+  {
+    "id": 1761390519099,
+    "type": "expense",
+    "message": "New expense added: Theatre Expenses",
+    "icon": "fa-wallet",
+    "color": "var(--color-bg-1)",
+    "read": false,
+    "timestamp": "2025-10-25T11:08:39.099Z"
+  },
+  {
+    "id": 1761387972833,
+    "type": "poll",
+    "message": "New poll: tcrfvygbuhnij",
+    "icon": "fa-poll",
+    "color": "var(--color-bg-5)",
+    "read": true,
+    "timestamp": "2025-10-25T10:26:12.833Z"
+  },
+  {
+    "id": 1761387940360,
+    "type": "poll",
+    "message": "New poll: Where are you going?",
+    "icon": "fa-poll",
+    "color": "var(--color-bg-5)",
+    "read": true,
+    "timestamp": "2025-10-25T10:25:40.360Z"
+  }
+]

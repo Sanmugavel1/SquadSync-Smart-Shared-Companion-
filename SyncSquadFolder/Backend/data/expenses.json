@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1761392282055,
+    "description": "Movie",
+    "amount": 2000,
+    "paidBy": "You",
+    "splitBetween": [
+      "You",
+      "Alice",
+      "Bob",
+      "Charlie"
+    ],
+    "timestamp": "2025-10-25T11:38:02.055Z"
+  },
+  {
+    "id": 1761390519074,
+    "description": "Theatre Expenses",
+    "amount": 1000,
+    "paidBy": "You",
+    "splitBetween": [
+      "You",
+      "Alice",
+      "Bob",
+      "Charlie"
+    ],
+    "timestamp": "2025-10-25T11:08:39.074Z"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1761389570205,
+    "name": "Ganesam M",
+    "email": "ganesan.mit.ec@gmail.com",
+    "password": "$2b$10$JAt7AUwQorj1Qwo6qQYaoe8HebLvOiG6Vf1Xa2H2ObyAsuGrAGjA6",
+    "createdAt": "2025-10-25T10:52:50.205Z"
+  },
+  {
+    "id": 1764522594919,
+    "name": "Sanmugavel B",
+    "email": "sanmugavelb1@gmail.com",
+    "password": "$2b$10$Djo9QuTEqRyr1TkdgsCjLu0jMevingybZhOzSMZ80oGJmghvI.dcy",
+    "createdAt": "2025-11-30T17:09:54.919Z"
+  }
+]

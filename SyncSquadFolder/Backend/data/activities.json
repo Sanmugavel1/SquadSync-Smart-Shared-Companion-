@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1761392718823,
+    "type": "deadline",
+    "message": "New deadline: Assess on 10/25/2025",
+    "icon": "fa-calendar-check",
+    "color": "var(--color-bg-4)",
+    "timestamp": "2025-10-25T11:45:18.823Z"
+  },
+  {
+    "id": 1761392506394,
+    "type": "poll",
+    "message": "Poll closed: Where are you going?",
+    "icon": "fa-check-circle",
+    "color": "var(--color-bg-3)",
+    "timestamp": "2025-10-25T11:41:46.394Z"
+  },
+  {
+    "id": 1761392504187,
+    "type": "poll",
+    "message": "Poll closed: tcrfvygbuhnij",
+    "icon": "fa-check-circle",
+    "color": "var(--color-bg-3)",
+    "timestamp": "2025-10-25T11:41:44.187Z"
+  },
+  {
+    "id": 1761392498094,
+    "type": "poll",
+    "message": "New poll created: Where are you going?",
+    "icon": "fa-poll",
+    "color": "var(--color-bg-5)",
+    "timestamp": "2025-10-25T11:41:38.094Z"
+  },
+  {
+    "id": 1761392433117,
+    "type": "memory",
+    "message": "New memory added: Everset",
+    "icon": "fa-camera",
+    "color": "var(--color-bg-5)",
+    "timestamp": "2025-10-25T11:40:33.117Z"
+  },
+  {
+    "id": 1761392406828,
+    "type": "task",
+    "message": "Task completed: Movie",
+    "icon": "fa-check-circle",
+    "color": "var(--color-bg-3)",
+    "timestamp": "2025-10-25T11:40:06.828Z"
+  },
+  {
+    "id": 1761392362157,
+    "type": "task",
+    "message": "New task created: Movie",
+    "icon": "fa-tasks",
+    "color": "var(--color-bg-3)",
+    "timestamp": "2025-10-25T11:39:22.157Z"
+  },
+  {
+    "id": 1761392324113,
+    "type": "deadline",
+    "message": "New deadline: Exam on 10/31/2025",
+    "icon": "fa-calendar-check",
+    "color": "var(--color-bg-4)",
+    "timestamp": "2025-10-25T11:38:44.113Z"
+  },
+  {
+    "id": 1761392282078,
+    "type": "expense",
+    "message": "You paid ₹2000 for Movie",
+    "icon": "fa-wallet",
+    "color": "var(--color-bg-1)",
+    "timestamp": "2025-10-25T11:38:02.078Z"
+  },
+  {
+    "id": 1761392133561,
+    "type": "task",
+    "message": "Task completed: Assignemnt",
+    "icon": "fa-check-circle",
+    "color": "var(--color-bg-3)",
+    "timestamp": "2025-10-25T11:35:33.561Z"
+  },
+  {
+    "id": 1761392127373,
+    "type": "task",
+    "message": "New task created: Assignemnt",
+    "icon": "fa-tasks",
+    "color": "var(--color-bg-3)",
+    "timestamp": "2025-10-25T11:35:27.373Z"
+  },
+  {
+    "id": 1761390519091,
+    "type": "expense",
+    "message": "You paid ₹1000 for Theatre Expenses",
+    "icon": "fa-wallet",
+    "color": "var(--color-bg-1)",
+    "timestamp": "2025-10-25T11:08:39.091Z"
+  },
+  {
+    "id": 1761388087900,
+    "type": "memory",
+    "message": "New memory added: Mountains",
+    "icon": "fa-camera",
+    "color": "var(--color-bg-5)",
+    "timestamp": "2025-10-25T10:28:07.900Z"
+  },
+  {
+    "id": 1761387972824,
+    "type": "poll",
+    "message": "New poll created: tcrfvygbuhnij",
+    "icon": "fa-poll",
+    "color": "var(--color-bg-5)",
+    "timestamp": "2025-10-25T10:26:12.824Z"
+  },
+  {
+    "id": 1761387940353,
+    "type": "poll",
+    "message": "New poll created: Where are you going?",
+    "icon": "fa-poll",
+    "color": "var(--color-bg-5)",
+    "timestamp": "2025-10-25T10:25:40.353Z"
+  }
+]

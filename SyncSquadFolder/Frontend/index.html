@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SquadSync - Smart Shared Life Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-users-rectangle"></i>
+                <span>SquadSync</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#dashboard" class="nav-link active" data-section="dashboard">
+                    <i class="fas fa-chart-line"></i> Dashboard
+                </a></li>
+                <li><a href="#expenses" class="nav-link" data-section="expenses">
+                    <i class="fas fa-wallet"></i> Expenses
+                </a></li>
+                <li><a href="#deadlines" class="nav-link" data-section="deadlines">
+                    <i class="fas fa-calendar-check"></i> Deadlines
+                </a></li>
+                <li><a href="#tasks" class="nav-link" data-section="tasks">
+                    <i class="fas fa-tasks"></i> Tasks
+                </a></li>
+                <li><a href="#memories" class="nav-link" data-section="memories">
+                    <i class="fas fa-images"></i> Memories
+                </a></li>
+                <li><a href="#polls" class="nav-link" data-section="polls">
+                    <i class="fas fa-poll"></i> Polls
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Notification Panel -->
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-header">
+            <h3>Notifications</h3>
+            <button class="close-btn" id="closeNotifications">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="notification-list" id="notificationList">
+            <!-- Notifications will be inserted here -->
+        </div>
+    </div>
+    <!-- Group Selector -->
+<div class="group-selector-container">
+<div class="container" style="padding: 1rem;">
+    <div class="group-selector">
+        <button class="group-selector-btn" id="groupSelectorBtn">
+            <i class="fas fa-users"></i>
+            <span id="currentGroupName">Select Group</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
+        
+        <div class="group-dropdown" id="groupDropdown">
+            <div class="group-list" id="groupList">
+                <!-- Groups will be inserted here -->
+            </div>
+            <button class="btn btn-primary btn-sm" style="width: 100%; margin-top: 10px;" onclick="openCreateGroupModal()">
+                <i class="fas fa-plus"></i> Create New Group
+            </button>
+        </div>
+    </div>
+
+    <button class="btn btn-secondary btn-sm" onclick="openManageMembersModal()" style="margin-left: 10px;">
+        <i class="fas fa-user-cog"></i> Manage Members
+    </button>
+</div>
+</div>
+
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section active">
+            <div class="section-header">
+                <h1>Dashboard</h1>
+                <button class="btn btn-icon" id="showNotifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge" id="notificationBadge">0</span>
+                </button>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--color-bg-1);">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="totalExpenses">₹0</h3>
+                        <p>Total Expenses</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--color-bg-4);">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="upcomingDeadlines">0</h3>
+                        <p>Upcoming Deadlines</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--color-bg-3);">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="completedTasks">0</h3>
+                        <p>Completed Tasks</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--color-bg-5);">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="totalMemories">0</h3>
+                        <p>Memories Saved</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Feed -->
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-stream"></i> Recent Activity</h2>
+                </div>
+                <div class="activity-feed" id="activityFeed">
+                    <div class="empty-state">
+                        <i class="fas fa-inbox"></i>
+                        <p>No recent activity</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expenses Section -->
+        <section id="expenses" class="section">
+            <div class="section-header">
+                <h1>Expense Manager</h1>
+                <button class="btn btn-primary" id="addExpenseBtn">
+                    <i class="fas fa-plus"></i> Add Expense
+                </button>
+            </div>
+
+            <!-- Balance Summary -->
+            <div class="balance-summary" id="balanceSummary">
+                <!-- Balance cards will be inserted here -->
+            </div>
+
+            <!-- Expense List -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Recent Expenses</h2>
+                    <div class="card-actions">
+                        <button class="btn btn-secondary" id="settleUpBtn">
+                            <i class="fas fa-handshake"></i> Settle Up
+                        </button>
+                    </div>
+                </div>
+                <div class="expense-list" id="expenseList">
+                    <div class="empty-state">
+                        <i class="fas fa-receipt"></i>
+                        <p>No expenses added yet</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deadlines Section -->
+        <section id="deadlines" class="section">
+            <div class="section-header">
+                <h1>Deadline Tracker</h1>
+                <button class="btn btn-primary" id="addDeadlineBtn">
+                    <i class="fas fa-plus"></i> Add Deadline
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Upcoming Deadlines</h2>
+                    <div class="filter-group">
+                        <select id="deadlineFilter" class="form-control">
+                            <option value="all">All</option>
+                            <option value="assignment">Assignments</option>
+                            <option value="registration">Registrations</option>
+                            <option value="exam">Exams</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="deadline-list" id="deadlineList">
+                    <div class="empty-state">
+                        <i class="fas fa-calendar-times"></i>
+                        <p>No deadlines set</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tasks Section -->
+        <section id="tasks" class="section">
+            <div class="section-header">
+                <h1>Task Board</h1>
+                <button class="btn btn-primary" id="addTaskBtn">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </div>
+
+            <div class="task-board">
+                <div class="task-column">
+                    <div class="column-header">
+                        <h3><i class="fas fa-circle" style="color: var(--color-warning);"></i> To Do</h3>
+                        <span class="task-count" id="todoCount">0</span>
+                    </div>
+                    <div class="task-list" id="todoTasks" data-status="todo">
+                        <div class="empty-state-small">No tasks</div>
+                    </div>
+                </div>
+
+                <div class="task-column">
+                    <div class="column-header">
+                        <h3><i class="fas fa-circle" style="color: var(--color-primary);"></i> In Progress</h3>
+                        <span class="task-count" id="progressCount">0</span>
+                    </div>
+                    <div class="task-list" id="progressTasks" data-status="progress">
+                        <div class="empty-state-small">No tasks</div>
+                    </div>
+                </div>
+
+                <div class="task-column">
+                    <div class="column-header">
+                        <h3><i class="fas fa-circle" style="color: var(--color-success);"></i> Completed</h3>
+                        <span class="task-count" id="completedCount">0</span>
+                    </div>
+                    <div class="task-list" id="completedTasks" data-status="completed">
+                        <div class="empty-state-small">No tasks</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memories Section -->
+        <section id="memories" class="section">
+            <div class="section-header">
+                <h1>Memory Vault</h1>
+                <button class="btn btn-primary" id="addMemoryBtn">
+                    <i class="fas fa-plus"></i> Add Memory
+                </button>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="photos">
+                    <i class="fas fa-images"></i> Photos
+                </button>
+                <button class="tab-btn" data-tab="classwork">
+                    <i class="fas fa-file-alt"></i> Classwork
+                </button>
+            </div>
+
+            <div class="tab-content active" id="photos">
+                <div class="memory-grid" id="photoGrid">
+                    <div class="empty-state">
+                        <i class="fas fa-camera"></i>
+                        <p>No memories added yet</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="classwork">
+                <div class="classwork-list" id="classworkList">
+                    <div class="empty-state">
+                        <i class="fas fa-folder-open"></i>
+                        <p>No classwork saved</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Polls Section -->
+        <section id="polls" class="section">
+            <div class="section-header">
+                <h1>Group Polls</h1>
+                <button class="btn btn-primary" id="addPollBtn">
+                    <i class="fas fa-plus"></i> Create Poll
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Active Polls</h2>
+                    <div class="filter-group">
+                        <select id="pollFilter" class="form-control">
+                            <option value="active">Active</option>
+                            <option value="closed">Closed</option>
+                            <option value="all">All</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="poll-list" id="pollList">
+                    <div class="empty-state">
+                        <i class="fas fa-vote-yea"></i>
+                        <p>No polls created yet</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Floating Action Button -->
+    <div class="fab" id="fab">
+        <button class="fab-button">
+            <i class="fas fa-plus"></i>
+        </button>
+        <div class="fab-menu">
+            <button class="fab-option" data-action="expense">
+                <i class="fas fa-wallet"></i>
+                <span>Expense</span>
+            </button>
+            <button class="fab-option" data-action="deadline">
+                <i class="fas fa-calendar"></i>
+                <span>Deadline</span>
+            </button>
+            <button class="fab-option" data-action="task">
+                <i class="fas fa-tasks"></i>
+                <span>Task</span>
+            </button>
+            <button class="fab-option" data-action="memory">
+                <i class="fas fa-camera"></i>
+                <span>Memory</span>
+            </button>
+            <button class="fab-option" data-action="poll">
+                <i class="fas fa-poll"></i>
+                <span>Poll</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal Container -->
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modalContent">
+            <!-- Modal content will be inserted dynamically -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

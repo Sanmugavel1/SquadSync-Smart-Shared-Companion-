@@ -1,0 +1,85 @@
+[
+  {
+    "id": 1761392498076,
+    "question": "Where are you going?",
+    "options": [
+      {
+        "text": "Mall",
+        "votes": 0,
+        "voters": []
+      },
+      {
+        "text": "Hostel",
+        "votes": 0,
+        "voters": []
+      },
+      {
+        "text": "House",
+        "votes": 0,
+        "voters": []
+      },
+      {
+        "text": "Beach",
+        "votes": 0,
+        "voters": []
+      }
+    ],
+    "status": "closed",
+    "timestamp": "2025-10-25T11:41:38.076Z"
+  },
+  {
+    "id": 1761387972812,
+    "question": "tcrfvygbuhnij",
+    "options": [
+      {
+        "text": "sefdv",
+        "votes": 0,
+        "voters": []
+      },
+      {
+        "text": "sgdv",
+        "votes": 1,
+        "voters": [
+          "You"
+        ]
+      },
+      {
+        "text": "sgd",
+        "votes": 0,
+        "voters": []
+      }
+    ],
+    "status": "closed",
+    "timestamp": "2025-10-25T10:26:12.812Z"
+  },
+  {
+    "id": 1761387940342,
+    "question": "Where are you going?",
+    "options": [
+      {
+        "text": "Mall",
+        "votes": 0,
+        "voters": []
+      },
+      {
+        "text": "Hostel",
+        "votes": 0,
+        "voters": []
+      },
+      {
+        "text": "House",
+        "votes": 1,
+        "voters": [
+          "You"
+        ]
+      },
+      {
+        "text": "Beach",
+        "votes": 0,
+        "voters": []
+      }
+    ],
+    "status": "active",
+    "timestamp": "2025-10-25T10:25:40.342Z"
+  }
+]
