@@ -48,7 +48,7 @@ if (!checkAuth()) {
 
 // ===== STATE MANAGEMENT =====
 // ===== API CONFIGURATION =====
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = '/api';
 
 // API Helper Functions
 const api = {
@@ -1778,3 +1778,4 @@ if (document.readyState === 'loading') {
 } else {
     init();
 }
+
