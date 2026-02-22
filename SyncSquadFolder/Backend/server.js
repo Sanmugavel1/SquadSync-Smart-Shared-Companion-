@@ -39,7 +39,7 @@ const initializeDataFiles = async () => {
     'polls.json',
     'activities.json',
     'notifications.json',
-    'users.json'
+    'users.json',
     'groups.json'
   ];
 
@@ -664,3 +664,4 @@ const startServer = async () => {
 };
 
 startServer();
+
