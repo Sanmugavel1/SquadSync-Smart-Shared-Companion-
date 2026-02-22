@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const path = require('path');
 const fs = require('fs-extra');
 const bcrypt = require('bcryptjs');
@@ -8,16 +7,22 @@ const jwt = require('jsonwebtoken');
 
 // Initialize Express App
 const app = express();
-const PORT = 3000;
-const JWT_SECRET = 'squad-sync-secret-key-2025-devquest'; // Change this in production
+
+// ✅ Render compatible PORT
+const PORT = process.env.PORT || 3000;
+
+// ✅ Production-safe JWT secret
+const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret';
 
 // Middleware
-app.use(cors()); // Enable CORS for frontend-backend communication
-app.use(bodyParser.json({ limit: '50mb' })); // Parse JSON data (50mb for images)
-app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
+app.use(cors());
+
+// ✅ Use Express built-in body parser (no need for bodyParser package)
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 // Serve static frontend files
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, '../Frontend')));
 
 // Ensure data directory exists
 const dataDir = path.join(__dirname, 'data');
@@ -35,6 +40,7 @@ const initializeDataFiles = async () => {
     'activities.json',
     'notifications.json',
     'users.json'
+    'groups.json'
   ];
 
   for (const file of files) {
@@ -636,7 +642,7 @@ app.get('/api/backup', async (req, res) => {
 
 // Root route - redirect to login
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/login.html'));
+  res.sendFile(path.join(__dirname, '../Frontend/login.html'));
 });
 
 // Start server
